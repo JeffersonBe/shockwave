@@ -1,0 +1,31 @@
+@font-face {
+    font-family:'LobsterTwo-BoldItalic';
+    src: url('fonts/LobsterTwo-BoldItalic.otf');
+}
+
+body{
+  margin: 0px; /* from each side*/
+  background: url("images/blue2.png") fixed repeat ;
+}
+
+
+.row{
+  margin: 5%;
+}
+
+
+.navbar-brand{
+    font-family: "LobsterTwo-BoldItalic", Arial, "Times New Roman";
+}
+
+.darkBG{
+    background: #999;
+}
+
+.darkerBG{
+    background: #666;
+}
+
+.darkestBG{
+    background: #333;
+}
