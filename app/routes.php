@@ -13,5 +13,25 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
+});
+Route::get('/shockwave', function()
+{
+	return View::make('shockwave');
+});
+Route::get('/programme', function()
+{
+	return View::make('programme');
+});
+Route::get('/pougnes', function()
+{
+	return View::make('pougnes');
+});
+Route::get('/sponsors', function()
+{
+	return View::make('sponsors');
+});
+Route::get('/fun', function()
+{
+	return View::make('fun');
 });
