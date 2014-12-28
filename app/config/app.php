@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Lavary\Menu\ServiceProvider',
+		'Zizaco\Confide\ServiceProvider',
 
 	),
 
@@ -190,6 +191,7 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Menu'              => 'Lavary\Menu\Facade',
+		'Confide'           => 'Zizaco\Confide\Facade',
 
 	),
 

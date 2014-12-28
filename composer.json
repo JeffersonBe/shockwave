@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"lavary/laravel-menu": "dev-master"
+		"lavary/laravel-menu": "dev-master",
+		"zizaco/confide": "~4.0@dev"
 	},
 	"autoload": {
 		"classmap": [

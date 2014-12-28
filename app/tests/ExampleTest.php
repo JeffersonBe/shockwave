@@ -14,4 +14,11 @@ class ExampleTest extends TestCase {
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
 
+	public function testAvailableNavigation()
+	{
+		$crawler = $this->client->request('GET', '/');
+
+		$this->parse('body')->assertClassHasAttribute('navigation');
+	}
+
 }
