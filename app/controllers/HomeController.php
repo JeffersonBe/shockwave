@@ -2,6 +2,7 @@
 
 class HomeController extends BaseController {
 
+	protected $layout = 'layout';
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
@@ -15,9 +16,33 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showIndex()
 	{
-		return View::make('hello');
+		return View::make('index');
 	}
 
+	public function showShockwave()
+	{
+		return View::make('shockwave');
+	}
+
+	public function showProgramme()
+	{
+		return View::make('programme');
+	}
+
+	public function showPougnes()
+	{
+		return View::make('pougnes');
+	}
+
+	public function showSponsors()
+	{
+		return View::make('sponsors');
+	}
+
+	public function showFun()
+	{
+		return View::make('fun');
+	}
 }

@@ -11,27 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('index');
-});
-Route::get('/shockwave', function()
-{
-	return View::make('shockwave');
-});
-Route::get('/programme', function()
-{
-	return View::make('programme');
-});
-Route::get('/pougnes', function()
-{
-	return View::make('pougnes');
-});
-Route::get('/sponsors', function()
-{
-	return View::make('sponsors');
-});
-Route::get('/fun', function()
-{
-	return View::make('fun');
-});
+Route::get('/','HomeController@showIndex');
+Route::get('/shockwave','HomeController@showShockwave');
+Route::get('/programme','HomeController@showProgramme');
+Route::get('/pougnes','HomeController@showPougnes');
+Route::get('/fun','HomeController@showFun');
+Route::get('/sponsors', 'HomeController@showSponsors');
