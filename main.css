@@ -3,29 +3,34 @@
     src: url('fonts/LobsterTwo-BoldItalic.otf');
 }
 
+
+
+
 body{
   margin: 0px; /* from each side*/
   background: url("images/blue2.png") fixed repeat ;
 }
 
+.navbar{
+  margin: 1%;
+}
+
+
+.jumbotron{
+  font-family: LobsterTwo-BoldItalic, Arial, "Times New Roman";
+  margin: 1%;
+  text-align: center;
+
+}
+
+.btn{
+  font-family: LobsterTwo-BoldItalic, Arial, "Times New Roman";
+  color: #0F2070;
+  text-align: center;
+
+}
+
 
 .row{
   margin: 5%;
-}
-
-
-.navbar-brand{
-    font-family: "LobsterTwo-BoldItalic", Arial, "Times New Roman";
-}
-
-.darkBG{
-    background: #999;
-}
-
-.darkerBG{
-    background: #666;
-}
-
-.darkestBG{
-    background: #333;
 }

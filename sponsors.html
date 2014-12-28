@@ -1,31 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
-  <head>
-    <!-- en-tete de la page -->
-    <link rel="stylesheet" href="main.css" />
-    <meta charset="utf-8" /> <!-- choix de l'encodage utf8 -->
-    <title>Shockwave 2015</title> <!-- titre de la page, s'affiche sur l'onglet -->
-    <link rel="stylesheet" href="main.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-  </head>
+<head>
+  <!-- en-tete de la page -->
+  <meta charset="utf-8" /> <!-- choix de l'encodage utf8 -->
+  <title>Shockwave 2015</title> <!-- titre de la page, s'affiche sur l'onglet -->
+  <link rel="stylesheet" href="main.css">
+  <!-- Latest compiled and minified CSS, bootstrap layouts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> <!-- creates tons and tons of css rules -->
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+</head>
 
-  <body>
+<!-- corps de la page -->
+<body>
 
-    <!-- EN-TETE -->
-    <header class="navbar-inverse" role="banner">
-
-      <!--BARRE DE NAVIGATION -->
-      <div class="container">
-
-        <nav role="navigation">
-
+  <!-- EN-TETE -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
-
           <div class="navbar-header">
-            <!-- ce qui suit est utile pour les portables ou tablettes, créé un menu déroulant-->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -33,106 +29,98 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Shockwave</a>
+
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Accueil<span class="sr-only">(current)</span></a></li>
-              <li><a href="shockwave.html">Organigramme</a></li>
-              <li><a href="programme.html">Programme</a></li>
-              <li><a href="#">Sponsors</a></li>
-              <li><a href="pougnes.html">Pougnes</a></li>
-              <li><a href="fun.html">Fun</a></li>
-              <li><a href="http://associations.it-sudparis.eu/">Assos</a></li>
+              <li><a  href="index.html">Accueil</a></li>
+              <li><a href="shockwave.html" >Organigramme</a></li>
+              <li><a  href="programme.html">Programme</a></li>
+              <li><a class="active" href="#" >Sponsors</a></li>
+              <li><a  href="pougnes.html" >Pougnes</a></li>
+              <li><a  href="fun.html" >Fun</a></li>
+              <li><a  href="http://associations.it-sudparis.eu/" role="button">Assos</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Liens utiles<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Ecampus</a></li>
                   <li><a href="#">Zimbra</a></li>
-                  <li><a href="#">je sais pas =)</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">que mettre?</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Et là?</a></li>
                 </ul>
               </li>
             </ul>
+
           </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  </header>
 
-        </nav>
+  <!--FIN DE L'EN-TETE-->
 
-      </div> <!-- container -->
 
-    </header>
-    <!--FIN DE L'EN-TETE-->
+  <!-- COEUR DU SITE -->
 
-    <div class="container"> <!-- container gives the centered looking feel -->
+  <div class="container"> <!-- container gives the centered looking feel -->
 
-      <div class="row">
+    <div class="jumbotron">
+      <h1>Nos sponsors!</h1>
 
-        <div class="col-sm-6 col-xs-12">
+    </div>
 
-          <div class="panel panel-success">
 
-            <div class="panel-heading">
-              <h3 class="panel-title">Widget 1</h3>
-            </div>
+    <div class="row">
 
-            <div class="panel-body">
-
-              <a href="#" class="btn btn-primary" role="button"> Link 1</a>
-              <a href="#" class="btn btn-success" role="button"> Link 2</a>
-              <a href="#" class="btn btn-info" role="button"> Link 3</a>
-            </div>
+      <div class="col-sm-10 col-xs-12">
+        <div id="panel1" class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Article</h3>
+          </div>
+          <div id="p1body" class="panel-body">
 
           </div>
-
         </div>
+      </div>
 
-        <div class="col-sm-3 col-xs-6">
-
-          <div class="panel panel-success">
-
-            <div class="panel-heading">
-              <h3 class="panel-title">Widget 2</h3>
-            </div>
-
-            <div class="panel-body text-danger">
-              <p> Hello there! </p>
-              <a href="#" class="btn btn-danger" role="button"> Link 1</a>
-              <a href="#" class="btn btn-danger" role="button"> Link 2</a>
-            </div>
-
+      <div class="col-sm-2 col-xs-6">
+        <div id="panel2" class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <button class="pannel-button btn btn-info btn-responsive" data-panelid="p2body">News</button>
+            </h3>
           </div>
-
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-
-          <div class="panel panel-success">
-
-            <div class="panel-heading">
-              <h3 class="panel-title">Widget 3</h3>
-            </div>
-
-            <div class="panel-body">
-              <a href="#" class="btn btn-danger" role="button"> Link 1</a>
-              <a href="#" class="btn btn-danger" role="button"> Link 2</a>
-            </div>
-
+          <div id="p2body" class="panel-body text-danger">
+            Content
           </div>
-
         </div>
+      </div>
 
-      </div> <!-- class row -->
+    </div> <!-- class row -->
 
-    </div> <!-- class container -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <!-- fait fonctionner mes menus déroulants! -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </div> <!-- class container -->
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  </body>
+
+
+  <script src="jquery.js"> </script>
+
+  <script>
+
+    $(function(){
+
+      $('.pannel-button').on('click', function(){
+        var panelId = $(this).attr('data-panelid');
+        $('#'+panelId).toggle();
+      });
+
+
+    });
+
+  </script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
 </html>
