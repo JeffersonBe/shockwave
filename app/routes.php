@@ -17,3 +17,15 @@ Route::get('/programme','HomeController@showProgramme');
 Route::get('/pougnes','HomeController@showPougnes');
 Route::get('/fun','HomeController@showFun');
 Route::get('/sponsors', 'HomeController@showSponsors');
+
+
+Menu::make('MyNavBar', function($menu){
+
+  $menu->add('Accueil');
+  $menu->add('Shockwave',    'shockwave');
+  $menu->add('Programme', 'programme');
+  $menu->add('Pougnes',  'pougnes');
+  $menu->add('Fun', 'fun');
+  $menu->add('Sponsors', 'sponsors');
+
+});
