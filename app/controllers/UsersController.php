@@ -9,7 +9,7 @@
  */
 class UsersController extends Controller
 {
-
+    protected $layout = 'layoutConfide';
     /**
      * Displays the form for account creation
      *
