@@ -1,7 +1,7 @@
 @extends('layoutConfide')
 @section('content')
 <div class="container">
-  <form method="POST" action="{{{ URL::to('users') }}}" accept-charset="UTF-8">
+  <form class="form-signin" method="POST" action="{{{ URL::to('users') }}}" accept-charset="UTF-8">
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
     <fieldset>
       <div class="form-group">
@@ -34,7 +34,7 @@
       @endif
 
       <div class="form-actions form-group">
-        <button type="submit" class="btn btn-primary">{{{ Lang::get('confide::confide.signup.submit') }}}</button>
+        <button type="submit" class="btn btn-primary btn-block">{{{ Lang::get('confide::confide.signup.submit') }}}</button>
       </div>
 
     </fieldset>

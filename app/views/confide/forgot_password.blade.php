@@ -1,7 +1,7 @@
 @extends('layoutConfide')
 @section('content')
 <div class="container">
-  <form method="POST" action="{{ URL::to('/users/forgot_password') }}" accept-charset="UTF-8">
+  <form class="form-signin" method="POST" action="{{ URL::to('/users/forgot_password') }}" accept-charset="UTF-8">
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
 
     <div class="form-group">
@@ -9,7 +9,7 @@
       <div class="input-append input-group">
         <input class="form-control" placeholder="{{{ Lang::get('confide::confide.e_mail') }}}" type="text" name="email" id="email" value="{{{ Input::old('email') }}}">
         <span class="input-group-btn">
-          <input class="btn btn-default" type="submit" value="{{{ Lang::get('confide::confide.forgot.submit') }}}">
+          <input class="btn btn-default btn-block" type="submit" value="{{{ Lang::get('confide::confide.forgot.submit') }}}">
         </span>
       </div>
     </div>

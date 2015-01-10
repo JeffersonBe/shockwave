@@ -31,7 +31,7 @@
       <div class="alert">{{{ Session::get('notice') }}}</div>
       @endif
       <div class="form-group">
-        <button tabindex="3" type="submit" class="btn btn-default">{{{ Lang::get('confide::confide.login.submit') }}}</button>
+        <button tabindex="3" type="submit" class="btn btn-default btn-block">{{{ Lang::get('confide::confide.login.submit') }}}</button>
       </div>
     </fieldset>
   </form>
