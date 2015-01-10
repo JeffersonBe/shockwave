@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Lavary\Menu\ServiceProvider',
 		'Zizaco\Confide\ServiceProvider',
+		'Zizaco\Entrust\EntrustServiceProvider',
 
 	),
 
@@ -192,6 +193,7 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Menu'              => 'Lavary\Menu\Facade',
 		'Confide'           => 'Zizaco\Confide\Facade',
+		'Entrust'						=> 'Zizaco\Entrust\EntrustFacade',
 
 	),
 
