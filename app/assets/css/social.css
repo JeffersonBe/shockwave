@@ -31,17 +31,17 @@
 }
 #social .fb
 {
-	background-image: url(images/fb.png);
+	background-image: url("/img/fb.png");
 }
 #social .in
 {
-	background-image: url(images/in.png);
+	background-image: url("/img/in.png");
 }
 #social .twit
 {
-	background-image: url(images/twit.png);
+	background-image: url("/img/twit.png");
 }
 #social .youtube
 {
-	background-image: url(images/youtube.png);
+	background-image: url("/img/youtube.png");
 }

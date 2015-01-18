@@ -12,7 +12,7 @@
 */
 
 Route::get('/','HomeController@showIndex');
-Route::get('/shockwave','HomeController@showShockwave');
+Route::get('/presentation','HomeController@showPresentation');
 Route::get('/programme','HomeController@showProgramme');
 Route::get('/pougnes','HomeController@showPougnes');
 Route::get('/fun','HomeController@showFun');

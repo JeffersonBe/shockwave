@@ -26,7 +26,7 @@ a:hover
 
 body{
   background-color:#112B7A;
-  background: url("img/blue2.png");
+  background: url("/img/blue2.png");
 
 }
 
@@ -62,7 +62,7 @@ h2 {
 }
 
 #container{
-  background: url("img/telecom.png");
+  background: url("/img/telecom.png");
   background-size: cover;
 	width:640px;
 	height:400px;
