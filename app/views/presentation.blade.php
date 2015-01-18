@@ -25,23 +25,23 @@
       <li><img title="Amal" src="img/amal.png" width="640" height="400" alt="test" /></li>
       <li><img title="Damien" src="img/damien.png" width="640" height="400" alt="test" /></li>
       <li><img title="Khalil" src="img/khalil.png" width="640" height="400" alt="test" /></li>
-      <li><img title="Sadok" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Selma" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Teodora" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Samir" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Ali G" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Charlotte" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Sarah" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Santosh" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Myriem" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Guillaume" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Léa" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Martina" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Houssem" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Athyna" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Nicolas" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Marin" src="" width="640" height="400" alt="test" /></li>
-      <li><img title="Natan" src="" width="640" height="400" alt="test" /></li>
+      <li><img title="Sadok" src="img/sadok.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Selma" src="img/selma.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Teodora" src="img/teodora.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Samir" src="img/samir.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Ali G" src="img/alig.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Charlotte" src="img/charlotte.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Sarah" src="img/sarah.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Santosh" src="img/santosh.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Myriem" src="img/myriem.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Guillaume" src="img/guillaume.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Léa" src="img/léa.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Martina" src="img/martina.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Houssem" src="img/houssem.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Athyna" src="img/athyna.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Nicolas" src="img/nicolas.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Marin" src="img/marin.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Natan" src="img/natan.png" width="640" height="400" alt="test" /></li>
     </ul>
   </div>
 
