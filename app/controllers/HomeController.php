@@ -23,7 +23,7 @@ class HomeController extends BaseController {
 
 	public function showShockwave()
 	{
-		return View::make('shockwave');
+		return View::make('presentation');
 	}
 
 	public function showProgramme()

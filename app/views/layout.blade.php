@@ -21,8 +21,12 @@
 <body>
   @include('navigation')
   @yield('content')
-  
+
+
   {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') }}
   {{ HTML::script('https://cdn.jsdelivr.net/jquery.jcanvas/13.04.26/jcanvas.min.js') }}
+  {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js') }}
+  {{ HTML::script('js/jquery.shutter/jquery.shutter.js') }}
+  {{ HTML::script('js/script.js') }}
 </body>
 </html>

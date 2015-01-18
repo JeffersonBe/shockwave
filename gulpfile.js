@@ -28,8 +28,6 @@ gulp.task('images', function() {
 
 gulp.task('scripts', function() {
   return gulp.src('app/assets/js/**/*.js')
-  .pipe(jshint('.jshintrc'))
-  .pipe(jshint.reporter('default'))
   .pipe(concat('main.js'))
   .pipe(gulp.dest('public/js'))
   .pipe(rename({suffix: '.min'}))
@@ -38,12 +36,17 @@ gulp.task('scripts', function() {
   .pipe(notify({ message: 'Scripts task complete' }));
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('app/assets/fonts/*')
+  .pipe(gulp.dest('public/css/'));
+});
+
 gulp.task('clean', function(cb) {
   del(['public/css', 'public/js', 'public/img'], cb)
 });
 
 gulp.task('default', ['clean'], function() {
-  gulp.start('styles', 'scripts', 'images');
+  gulp.start('styles', 'scripts', 'images', 'fonts');
 });
 
 gulp.task('watch', function() {
