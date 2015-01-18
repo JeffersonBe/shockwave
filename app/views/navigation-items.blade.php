@@ -1,31 +1,10 @@
 @foreach($items as $item)
-  <li{{$item->builder->attributes($item->attr())}}@if($item->hasChildren()) class="dropdown" @endif>
-    @if($item->link)
-    <a
-    {{$item->builder->attributes($item->link->attr())}} href="{{ $item->url() }}"
-
-      @if($item->hasChildren()) class="dropdown-toggle" data-toggle="dropdown"
-      @endif>
-
-      {{ $item->title }}
-
-      @if($item->hasChildren())
-        <b class="caret"></b>
-      @endif
-    </a>
-    @else
-      {{$item->title}}
-    @endif
-
+<li @if($item->hasChildren()) class="dropdown" @endif>
+  <a href="{{ $item->url() }}">{{ $item->title }} </a>
   @if($item->hasChildren())
-    <ul class="dropdown-menu">
-      @include('bootstrap-navbar-items', array('items' => $item->children()))
-    </ul>
+  <ul class="dropdown-menu">
+    @include('custom-menu-items', array('items' => $item->children()))
+  </ul>
   @endif
-  </li>
-
-  @if($item->divider)
-    <li{{$item->builder->attributes($item->divider)}}></li>
-  @endif
-
+</li>
 @endforeach
