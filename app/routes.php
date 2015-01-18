@@ -37,7 +37,7 @@ Route::get('users/logout', 'UsersController@logout');
 Menu::make('MyNavBar', function($menu){
 
   $menu->add('Accueil');
-  $menu->add('Shockwave', 'shockwave');
+  $menu->add('Présentation', 'presentation');
   $menu->add('Programme', 'programme');
   $menu->add('Pougnes',  'pougnes');
   $menu->add('Fun', 'fun');
