@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- adaptation mobile -->
+    <title>Shockwave</title>
+    <meta name=description content="BLABLABLA" /> <!-- description référencement -->
+    <meta name=keywords content="keyword1, keyword2, keyword3, etc" /> <!-- mot-clés réf -->
+    <meta property="og:title" content="Titre du site pour facebook" />
+    <meta property="og:type" content="website" /> <!-- De quoi il s'agit -->
+    <meta property="og:url" content="index.html" /> <!-- cette page.html -->
+    <meta property="og:image" content="/images/image1.jpg" /> <!-- image facebook -->
+    <meta property="og:description" content="Descitpion sympathique pour facebook" />
+    <meta name=robots content="index, follow" /> <!-- Indexation de la page sur google sinon noindex, nofollow -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />  <!-- image à coté du nom de domaine -->
+
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="font.css"/>
+    <link rel="stylesheet" href="mob.css"/>
+    <link rel="stylesheet" href="social.css"/>
+    <link rel="stylesheet" href="header.css"/>
+
+    <script src="jquery.js"></script>
+    <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#content").load("contenu.html");
+    });
+    </script>
+
+  <head>
+
+  <body>
+
+    <div id="container">
+      <div id="header"></div>
+      <div id="content"></div>
+      <footer></footer>
+    </div>
+
+
+
+    <!-- SCRIPT -->
+    <script>
+    var cb=function(){var l=document.createElement('link');l.rel='stylesheet';l.href='css/style.css';var h=document.getElementsByTagName('head')[0];h.parentNode.insertBefore(l,h)};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(cb);else window.addEventListener('load',cb);
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.jcanvas/13.04.26/jcanvas.min.js"></script>
+
+  </body>
+
+</html>

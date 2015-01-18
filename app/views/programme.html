@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- adaptation mobile -->
+    <title>Shockwave</title>
+    <meta name=description content="BLABLABLA" /> <!-- description référencement -->
+    <meta name=keywords content="keyword1, keyword2, keyword3, etc" /> <!-- mot-clés réf -->
+    <meta property="og:title" content="Titre du site pour facebook" />
+    <meta property="og:type" content="website" /> <!-- De quoi il s'agit -->
+    <meta property="og:url" content="index.html" /> <!-- cette page.html -->
+    <meta property="og:image" content="/images/image1.jpg" /> <!-- image facebook -->
+    <meta property="og:description" content="Descitpion sympathique pour facebook" />
+    <meta name=robots content="index, follow" /> <!-- Indexation de la page sur google sinon noindex, nofollow -->
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />  <!-- image à coté du nom de domaine -->
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <link rel="stylesheet" type="text/css" href="assets/jquery.shutter/jquery.shutter.css" />
+    <link rel="stylesheet" href="font.css"/>
+    <link rel="stylesheet" href="mob.css"/>
+    <link rel="stylesheet" href="social.css"/>
+    <link rel="stylesheet" href="header.css"/>
+
+  </head>
+
+  <body>
+
+
+    <header>
+      <div id="social" class="hide_mob">
+        <a href="#" target="blank" class="fb"></a>
+        <a href="#" target="blank" class="in"></a>
+        <a href="#" class="twit"></a>
+        <a href="#" class="youtube"></a>
+      </div>
+      <div id="logo"></div>
+      <div id="menu" class="hide_mob">
+        <a class="accueil" href="index.html"></a>
+        <ul>
+          <li><a href="presentation.html">Présentation</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="pougnes.html">Pougnes</a></li>
+          <li><a href="fun.html">Fun</a></li>
+          <li><a href="sponsors.html">Partenaires</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="top"></div>
+
+    <div id="page">
+
+
+
+    </div>
+
+    <footer></footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="assets/jquery.shutter/jquery.shutter.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+    var cb=function(){var l=document.createElement('link');l.rel='stylesheet';l.href='css/style.css';var h=document.getElementsByTagName('head')[0];h.parentNode.insertBefore(l,h)};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(cb);else window.addEventListener('load',cb);
+    </script>
+    <script src="//cdn.jsdelivr.net/jquery.jcanvas/13.04.26/jcanvas.min.js"></script>
+
+  </body>
+
+</html>
