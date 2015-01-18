@@ -24,6 +24,12 @@ a:hover
     color: #060200;
 }
 
+body{
+  background-color:#112B7A;
+  background: url("images/blue2.png");
+
+}
+
 #top{
 	height:31px;
 }
@@ -56,6 +62,8 @@ h2 {
 }
 
 #container{
+  background: url("images/telecom.png");
+  background-size: cover;
 	width:640px;
 	height:400px;
 	margin:50px auto;
