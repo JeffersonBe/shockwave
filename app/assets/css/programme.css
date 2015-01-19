@@ -67,12 +67,12 @@ html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}}@media (max-width:
 /*//////////////////////////////////////////////
 ///////// /!\ CODE CSS HERE FREESTYLE /!\ //////
 ////////////////////////////////////////////////*/
-/*html, body, #container{
-  height: 70%;
+html, body, #container{
+  height: 100%;
 }
 
 body > #container { height: auto; min-height: 100%; }
-*/
+
 
 *{
   cursor: url("css/img/thorcur1.png"), pointer;
@@ -158,8 +158,9 @@ header #menu ul li a{
 
 #contenu{
     width:100%;
-    height:100px;
-
+    height:auto;
+    background-color:rgba(155,213,227,0.1);
+    padding-bottom:50px;
 }
 
 ul li{
@@ -209,13 +210,17 @@ header #menu ul li{
 }#menu .accueil:hover{
     opacity:1;
     cursor: url("css/img/hand1.png"), pointer;
-}#contenu .blocG{
+}
 
-    width:70%;
+#contenu .blocG{
+
+    width:100%;
     height:auto;
-}#contenu .blocG .interface{
+}
 
-    width:80%;
+#contenu .blocG .interface{
+
+    width:90%;
     height:auto;
     position:relative;
     margin: 0 auto;
@@ -241,8 +246,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', end
     background-size:267px 150px;
 }*/
 
+/*
 #contenu .blocD{
-    width:30%;
+    width:auto;
     height:auto;
     background-color:;
 }#contenu .blocD .news{
@@ -257,26 +263,15 @@ background: -ms-radial-gradient(center, ellipse cover,  rgba(252,255,244,1) 0%,r
 background: radial-gradient(ellipse at center,  rgba(252,255,244,1) 0%,rgba(223,229,215,0.76) 40%,rgba(179,190,173,0.4) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#66b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     position: relative;
-    margin: 0 5% 5% 0;
-    top: 50px;
+    margin: 0 auto;
+    top: 60px;
     text-align:center;
 }
-
-#contenu .blocD .news ul{
-      padding: 15%;
-      margin:0%;
-}
-
-#contenu .blocD .news h1{
-  border: 1px solid black;
-}
-
-
 
 #contenu .blocD .news ul li a{
       font-family: OpenSans-Regular, Arial;
 }
-
+*/
 
 h1{
     color: rgba(26,55,95,1);
@@ -284,7 +279,11 @@ h1{
     font-weight:normal;
     text-transform:uppercase;
     text-align: center;
-    font-size: 50px;
+}
+
+h2{
+  font-family: OpenSans-Regular, Arial;
+  text-align: center;
 }
 
 
@@ -317,7 +316,9 @@ p{
     border-top:1px solid black;
     background: url("css/img/g1.jpg");
     background-size: cover;
-}#social
+}
+
+#social
 {
     float: right  ;
 	width: auto;

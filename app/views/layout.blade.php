@@ -15,15 +15,13 @@
   <link rel="icon" type="image/png" href="images/favicon.png" />  <!-- image à coté du nom de domaine -->
 
   {{ HTML::style('css/main.css') }}
-  {{ HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css') }}
-  {{ HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css') }}
+
   <head>
 <body>
   @include('navigation')
   @yield('content')
 
 
-  {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') }}
   {{ HTML::script('https://cdn.jsdelivr.net/jquery.jcanvas/13.04.26/jcanvas.min.js') }}
   {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js') }}
   {{ HTML::script('js/main.min.js') }}
