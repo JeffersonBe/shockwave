@@ -41,7 +41,7 @@ class HomeController extends BaseController {
 		return View::make('sponsors');
 	}
 
-	public function showFun()
+	public function showPhotoVideo()
 	{
 		return View::make('fun');
 	}

@@ -15,7 +15,7 @@ Route::get('/','HomeController@showIndex');
 Route::get('/presentation','HomeController@showPresentation');
 Route::get('/programme','HomeController@showProgramme');
 Route::get('/pougnes','HomeController@showPougnes');
-Route::get('/fun','HomeController@showFun');
+Route::get('/photoVideo','HomeController@showPhotoVideo');
 Route::get('/sponsors', 'HomeController@showSponsors');
 
 //
@@ -39,8 +39,8 @@ Menu::make('MyNavBar', function($menu){
   $menu->add('Accueil');
   $menu->add('Présentation', 'presentation');
   $menu->add('Programme', 'programme');
-  $menu->add('Pougnes',  'pougnes');
-  $menu->add('Fun', 'fun');
-  $menu->add('Sponsors', 'sponsors');
+  // $menu->add('Pougnes',  'pougnes');
+  $menu->add('Photos/Vidéo', 'photoVideo');
+  // $menu->add('Sponsors', 'sponsors');
 
 });
