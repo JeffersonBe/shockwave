@@ -8,6 +8,7 @@
 
   <div id="container">
     <ul>
+      <li><img src="images/logo.png" width="640" height="400" alt="Landscape" /></li>
       <li><img title="Leo" src="img/leo.png" width="640" height="400" alt="test" /></li>
       <li><img title="Adrien" src="img/adrien.png" width="640" height="400" alt="test" /></li>
       <li><img title="Ali B" src="img/alib.png" width="640" height="400" alt="test" /></li>
@@ -15,7 +16,7 @@
       <li><img title="Flavien" src="img/flavien.png" width="640" height="400" alt="test" /></li>
       <li><img title="Allan" src="img/allan.png" width="640" height="400" alt="test" /></li>
       <li><img title="Rokia" src="img/rokia.png" width="640" height="400" alt="test" /></li>
-      <li><img title="Quentin" src="quentin.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Quentin" src="img/quentin.png" width="640" height="400" alt="test" /></li>
       <li><img title="Anaïs" src="img/anais.png" width="640" height="400" alt="test" /></li>
       <li><img title="Arunson" src="img/arunson.png" width="640" height="400" alt="test" /></li>
       <li><img title="Zakaria" src="img/zak.png" width="640" height="400" alt="test" /></li>
@@ -41,6 +42,7 @@
       <li><img title="Athyna" src="img/athyna.png" width="640" height="400" alt="test" /></li>
       <li><img title="Nicolas" src="img/nicolas.png" width="640" height="400" alt="test" /></li>
       <li><img title="Marin" src="img/marin.png" width="640" height="400" alt="test" /></li>
+      <li><img title="Lucas" src="img/lucas.png" width="640" height="400" alt="test" /></li>
       <li><img title="Natan" src="img/natan.png" width="640" height="400" alt="test" /></li>
     </ul>
   </div>
