@@ -20,7 +20,7 @@
 <body>
   <div class="row">
     @include('navigation')
-    <div class="container">
+    <div class="container main">
       @yield('content')
     <div>
     @include('footer')

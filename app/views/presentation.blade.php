@@ -1,11 +1,8 @@
 @extends('layout')
 @section('content')
-<div id="top"></div>
-
-<div id="page">
-
-  <h1 class="listeux">Les listeux!</h1>
-
+  <div class="page-header">
+    <h1 class="listeux">Les listeux!</h1>
+  </div>
   <div id="container">
     <ul>
       <li><img src="images/logo.png" width="640" height="400" alt="Landscape" /></li>

@@ -17,7 +17,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 gulp.task('styles', function () {
-  return gulp.src('app/assets/css/master.scss')
+  return gulp.src('app/assets/css/*.scss')
   .pipe(sass())
   .pipe(minifycss())
   .pipe(concat('main.css'))
