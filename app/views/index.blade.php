@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div id="contenu">
+<div class="container-fluid">
   <div class="blocG flotL_mob">
     <div class="interface">
       <div class="image"></div>

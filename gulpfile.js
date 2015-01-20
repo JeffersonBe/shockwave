@@ -1,8 +1,9 @@
 // Based on http://markgoodyear.com/2014/01/getting-started-with-gulp/
+
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
+    minifycss = require('gulp-minify-css')
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
@@ -13,57 +14,27 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     del = require('del'),
     gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    paths = {
-      scripts: ['app/assets/js/*.js'],
-      scriptsBuild: ['app/assets/build/js/*.js'],
-      scriptsPublic: ['app/public/js'],
-      styles: ['app/assets/css/master.scss'],
-      stylesBuild: ['app/assets/build/*.css'],
-      stylesPublic: ['app/public/css'],
-      images: ['app/assets/img/*.png', 'app/assets/img/**/*.png'],
-      imagesPublic: ['app/public/img'],
-      fonts:['app/assets/fonts/*']
-    };
-
-
-gulp.task('prod', function(){
-  return gulp.src(['app/assets/build/*', 'app/assets/build/**/*'])
-  .pipe(gulp.dest('public/build'))
-});
-
-gulp.task('sass', function () {
-  return gulp.src('app/assets/css/master.scss')
-  .pipe(sass())
-  .pipe(gulp.dest('app/assets/css'));
-});
+    sass = require('gulp-sass');
 
 gulp.task('styles', function () {
-  return gulp.src('paths.stylesBuild')
+  return gulp.src('app/assets/css/master.scss')
+  .pipe(sass())
   .pipe(minifycss())
   .pipe(concat('main.css'))
-  .pipe(gulp.dest('public/css/'));
+  .pipe(gulp.dest('public/build/'))
 });
 
 gulp.task('images', function() {
-  return gulp.src('paths.images')
+  return gulp.src(['app/assets/img/*.png', 'app/assets/img/**/*.png', 'app/assets/img/*.jpg', 'app/assets/img/**/*.jpg'])
   .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-  .pipe(gulp.dest('public/img'))
+  .pipe(gulp.dest('public/img'));
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('paths.scripts')
+  return gulp.src(['app/assets/js/*.js', 'app/assets/js/**/*.js'])
   .pipe(concat('main.js'))
-  .pipe(gulp.dest('public/js'))
-  .pipe(rename({suffix: '.min'}))
   .pipe(uglify())
-  .pipe(gulp.dest('public/js'))
-  .pipe(notify({ message: 'Scripts task complete' }));
-});
-
-gulp.task('fonts', function () {
-  return gulp.src('paths.fonts')
-  .pipe(gulp.dest('public/fonts/'));
+  .pipe(gulp.dest('public/build/'));
 });
 
 gulp.task('clean', function(cb) {
@@ -71,7 +42,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('default', ['clean'], function() {
-  gulp.start('styles', 'scripts', 'images', 'fonts');
+  gulp.start('styles', 'scripts', 'images');
 });
 
 gulp.task('watch', function() {
@@ -86,9 +57,9 @@ gulp.task('watch', function() {
   gulp.watch('paths.images', ['images']);
 
   // Create LiveReload server
-  livereload.listen();
+  // livereload.listen();
 
   // Watch any files in dist/, reload on change
-  gulp.watch(['public/**']).on('change', livereload.changed);
+  // gulp.watch(['public/**']).on('change', livereload.changed);
 
 });

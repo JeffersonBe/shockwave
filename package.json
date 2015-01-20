@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "clean-css": "^3.0.5",
     "del": "^1.1.1",
     "duo": "^0.9.2",
     "duo-sass": "^1.2.1",

@@ -14,15 +14,20 @@
   <meta name=robots content="index, follow" /> <!-- Indexation de la page sur google sinon noindex, nofollow -->
   <link rel="icon" type="image/png" href="images/favicon.png" />  <!-- image à coté du nom de domaine -->
 
+  {{ HTML::style('build/component.css') }}
   {{ HTML::style('build/main.css') }}
 <head>
 <body>
-  @include('navigation')
-  @yield('content')
+  <div class="row">
+    @include('navigation')
+    <div class="container">
+      @yield('content')
+    <div>
+    @include('footer')
+  </diV>
 
-
-  {{ HTML::script('https://cdn.jsdelivr.net/jquery.jcanvas/13.04.26/jcanvas.min.js') }}
-  {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js') }}
-  {{ HTML::script('build/main.min.js') }}
+  {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js') }}
+  {{ HTML::script('build/component.js') }}
+  {{ HTML::script('build/main.js') }}
 </body>
 </html>
