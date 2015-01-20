@@ -1,4 +1,12 @@
-vendor/
-node_modules/
-public/
-.DS_STORE
+/bootstrap/compiled.php
+/vendor
+/public
+/node_modules
+/app/assets/build
+/app/assets/components
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
