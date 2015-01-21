@@ -1,0 +1,209 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'duo' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'duo', null ]
+5 verbose cache add name=undefined spec="duo" args=["duo",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'duo',
+6 verbose parsed url   path: 'duo',
+6 verbose parsed url   href: 'duo' }
+7 silly lockFile 16ef1d43-duo duo
+8 verbose lock duo /home/natan/.npm/16ef1d43-duo.lock
+9 silly lockFile 16ef1d43-duo duo
+10 silly lockFile 16ef1d43-duo duo
+11 verbose addNamed [ 'duo', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile e0f22da0-duo duo@
+14 verbose lock duo@ /home/natan/.npm/e0f22da0-duo.lock
+15 silly addNameRange { name: 'duo', range: '*', hasData: false }
+16 verbose url raw duo
+17 verbose url resolving [ 'https://registry.npmjs.org/', './duo' ]
+18 verbose url resolved https://registry.npmjs.org/duo
+19 info trying registry request attempt 1 at 21:21:31
+20 verbose etag "EHPM673IPBUQYDW2SS0CJJ3L"
+21 http GET https://registry.npmjs.org/duo
+22 http 304 https://registry.npmjs.org/duo
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Wed, 21 Jan 2015 20:21:31 GMT',
+23 silly registry.get     server: 'Apache',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'last-modified': 'Wed, 21 Jan 2015 20:21:32 GMT',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     etag: '"EHPM673IPBUQYDW2SS0CJJ3L"',
+23 silly registry.get     age: '0',
+23 silly registry.get     'x-served-by': 'cache-ams4127-AMS',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1421871691.560154,VS0,VE963',
+23 silly registry.get     vary: 'Accept',
+23 silly registry.get     'content-length': '0',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 verbose etag duo from cache
+25 silly addNameRange number 2 { name: 'duo', range: '*', hasData: true }
+26 silly addNameRange versions [ 'duo',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.1.0',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.4',
+26 silly addNameRange     '0.2.5',
+26 silly addNameRange     '0.2.6',
+26 silly addNameRange     '0.2.7',
+26 silly addNameRange     '0.2.8',
+26 silly addNameRange     '0.2.9',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.3.2',
+26 silly addNameRange     '0.3.3',
+26 silly addNameRange     '0.3.4',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.5.3',
+26 silly addNameRange     '0.5.4',
+26 silly addNameRange     '0.5.5',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.6.2',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.7.4',
+26 silly addNameRange     '0.7.5',
+26 silly addNameRange     '0.7.7',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.8.3',
+26 silly addNameRange     '0.8.4',
+26 silly addNameRange     '0.8.5',
+26 silly addNameRange     '0.8.6',
+26 silly addNameRange     '0.8.7',
+26 silly addNameRange     '0.8.8',
+26 silly addNameRange     '0.8.9',
+26 silly addNameRange     '0.8.10',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.9.1',
+26 silly addNameRange     '0.9.2' ] ]
+27 verbose addNamed [ 'duo', '0.9.2' ]
+28 verbose addNamed [ '0.9.2', '0.9.2' ]
+29 silly lockFile c34b96d4-duo-0-9-2 duo@0.9.2
+30 verbose lock duo@0.9.2 /home/natan/.npm/c34b96d4-duo-0-9-2.lock
+31 silly lockFile c34b96d4-duo-0-9-2 duo@0.9.2
+32 silly lockFile c34b96d4-duo-0-9-2 duo@0.9.2
+33 silly lockFile e0f22da0-duo duo@
+34 silly lockFile e0f22da0-duo duo@
+35 silly resolved [ { name: 'duo',
+35 silly resolved     version: '0.9.2',
+35 silly resolved     description: 'A next-generation package manager for the front-end',
+35 silly resolved     homepage: 'http://duojs.org/',
+35 silly resolved     license: 'MIT',
+35 silly resolved     repository: { type: 'git', url: 'https://github.com/duojs/duo.git' },
+35 silly resolved     bin:
+35 silly resolved      { duo: 'bin/duo',
+35 silly resolved        _duo: 'bin/_duo',
+35 silly resolved        'duo-duplicates': 'bin/duo-duplicates',
+35 silly resolved        'duo-ls': 'bin/duo-ls' },
+35 silly resolved     dependencies:
+35 silly resolved      { archy: '0.0.2',
+35 silly resolved        'atomic-json': '0.0.4',
+35 silly resolved        batch: '^0.5.1',
+35 silly resolved        bytes: '^1.0.0',
+35 silly resolved        co: '^3.1.0',
+35 silly resolved        'co-exists': '0.0.1',
+35 silly resolved        'co-fs': '~1.2.0',
+35 silly resolved        'co-parallel': '~1.0.0',
+35 silly resolved        commander: '^2.2.0',
+35 silly resolved        'component-clone': '^0.2.2',
+35 silly resolved        cp: '^0.1.1',
+35 silly resolved        debug: '^2.0.0',
+35 silly resolved        delegates: '0.0.3',
+35 silly resolved        'duo-css-compat': '^0.0.4',
+35 silly resolved        'duo-main': '^0.0.3',
+35 silly resolved        'duo-pack': '1.0.11',
+35 silly resolved        'duo-package': '^0.5.1',
+35 silly resolved        'duo-parse': '^0.2.0',
+35 silly resolved        'duo-string-to-js': '~0.1.0',
+35 silly resolved        'duo-test': '0.x',
+35 silly resolved        'duo-watch': '^0.1.1',
+35 silly resolved        'extend.js': '0.0.1',
+35 silly resolved        'file-deps': '^0.0.7',
+35 silly resolved        'get-stdin': '~1.0.0',
+35 silly resolved        glob: '^4.3.1',
+35 silly resolved        gnode: '0.1.0',
+35 silly resolved        'json-mask': '^0.3.1',
+35 silly resolved        'language-classifier': '0.0.1',
+35 silly resolved        'max-component': '~1.0.0',
+35 silly resolved        mkdirp: '^0.5.0',
+35 silly resolved        'step.js': '~2.0.2',
+35 silly resolved        'stream-log': '0.1.0',
+35 silly resolved        thunkify: '~2.1.1',
+35 silly resolved        unyield: '0.0.1',
+35 silly resolved        'win-fork': '^1.1.1' },
+35 silly resolved     devDependencies:
+35 silly resolved      { 'co-mocha': '0.0.4',
+35 silly resolved        'coffee-script': '~1.7.1',
+35 silly resolved        'duo-jade': '0.x',
+35 silly resolved        'expect.js': '^0.3.1',
+35 silly resolved        istanbul: 'git://github.com/gotwarlost/istanbul#c6f8fc8b102cfa4e4455d6a165485b38cb58160c',
+35 silly resolved        mocha: '^1.20.1',
+35 silly resolved        regenerator: '~0.4.9',
+35 silly resolved        rimraf: '^2.2.8',
+35 silly resolved        styl: '^0.2.7',
+35 silly resolved        'map-stream': '~0.1.0',
+35 silly resolved        gulp: '~3.8.7' },
+35 silly resolved     readme: '![duo](https://i.cloudup.com/zxYO3-GNkP.png)\n\n[![NPM version][npm-image]][npm-url]\n[![build status][travis-image]][travis-url]\n\nDuo is a next-generation package manager that blends the best ideas from [Component](https://github.com/component/component), [Browserify](https://github.com/substack/node-browserify) and [Go](http://golang.org/) to make organizing and writing front-end code quick and painless.\n\n- [Features](#features)\n- [Installation](#installation)\n- [Getting Started](#getting-started)\n- [Command Line Usage](/docs/cli.md)\n- [Javascript API](/docs/api.md)\n- [Duo.js Plugins](https://github.com/duojs/duo/wiki/Third-Party-Libraries)\n- [FAQ](/docs/faq.md)\n- [Mailing List](https://groups.google.com/forum/#!forum/duojs)\n- `#duojs` on freenode\n\n\n## Features\n\n  1. has first-class support for Javascript, HTML and CSS\n  2. exposes a unix-y command line interface\n  3. pulls source directly from GitHub with semantic versioning\n  4. supports source transforms, like Coffeescript or Sass\n  5. does not require a manifest\n\n\n## Installation\n\nInstall Duo straight from `npm` with:\n\n```\n$ npm install -g duo\n```\n\n## Getting Started\n\nTo get started just write normal Javascript, requiring dependencies straight from the file system or from GitHub as you need them:\n\n```js\nvar uid = require(\'matthewmueller/uid\');\nvar fmt = require(\'yields/fmt\');\n\nvar msg = fmt(\'Your unique ID is %s!\', uid());\nwindow.alert(msg);\n```\n\nThen use `duo` to install your dependencies and build your file:\n\n```\n$ duo index.js\n```\n\nFinally, drop a single `<script>` onto your page and you\'re done!\n\n```html\n<script src="build/index.js"></script>\n```\n\nSame goes for CSS! You can require dependencies and assets from the file system or straight from GitHub:\n\n```css\n@import \'necolas/normalize.css\';\n\nbody {\n  color: teal;\n  background: url(\'./background-image.jpg\');\n}\n```\n\nThen bundle up your CSS with `duo`:\n\n```\n$ duo index.css\n```\n\nAnd add your bundled-up stylesheet to your page!\n\n```html\n<link rel="stylesheet" href="build/index.css">\n```\n\n## Authenticate with Github\n\nWe recommend that you authenticate with Github so you can increase your rate limit and allow you to pull from private repositories. To do that, add the following entry to your `~/.netrc` file:\n\n    machine api.github.com\n      login <username>\n      password <token>\n\nYou can create a new `token` here: https://github.com/settings/tokens/new\n\n## Debugging\n\nIf you run into an issue with Duo, often times you can resolve it by prepending `DEBUG=duo*` to your `$COMMAND`:\n\n```bash\n$ DEBUG=duo* $COMMAND\n```\n\nExample:\n\n```bash\n$ DEBUG=duo* duo index.js\n```\n\nIf you can\'t figure it out, you should open an issue: https://github.com/duojs/duo/issues\n\n## Test\n\nDownload this repository and run:\n\n```bash\nmake test\n```\n\n## Authors\n\n- [Matthew Mueller](https://github.com/MatthewMueller)\n- [Amir Abu Shareb](https://github.com/yields)\n- Plus many more wonderful [contributors](https://github.com/duojs/duo/graphs/contributors)!\n\n## License\n\nThe MIT License\n\nCopyright &copy; 2014\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n[npm-image]: https://img.shields.io/npm/v/duo.svg?style=flat\n[npm-url]: https://npmjs.org/package/duo\n[travis-image]: https://img.shields.io/travis/duojs/duo.svg?style=flat\n[travis-url]: https://travis-ci.org/duojs/duo\n',
+35 silly resolved     readmeFilename: 'Readme.md',
+35 silly resolved     bugs: { url: 'https://github.com/duojs/duo/issues' },
+35 silly resolved     _id: 'duo@0.9.2',
+35 silly resolved     _from: 'duo@' } ]
+36 info install duo@0.9.2 into /usr/local/lib
+37 info installOne duo@0.9.2
+38 info /usr/local/lib/node_modules/duo unbuild
+39 verbose tar unpack /home/natan/.npm/duo/0.9.2/package.tgz
+40 silly lockFile 8d8b6b1b-r-usr-local-lib-node-modules-duo tar:///usr/local/lib/node_modules/duo
+41 verbose lock tar:///usr/local/lib/node_modules/duo /home/natan/.npm/8d8b6b1b-r-usr-local-lib-node-modules-duo.lock
+42 silly lockFile 134a0c76--natan-npm-duo-0-9-2-package-tgz tar:///home/natan/.npm/duo/0.9.2/package.tgz
+43 verbose lock tar:///home/natan/.npm/duo/0.9.2/package.tgz /home/natan/.npm/134a0c76--natan-npm-duo-0-9-2-package-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 error Error: EACCES, mkdir '/usr/local/lib/node_modules/duo'
+45 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/duo']
+45 error   errno: 3,
+45 error   code: 'EACCES',
+45 error   path: '/usr/local/lib/node_modules/duo',
+45 error   fstream_type: 'Directory',
+45 error   fstream_path: '/usr/local/lib/node_modules/duo',
+45 error   fstream_class: 'DirWriter',
+45 error   fstream_stack:
+45 error    [ '/usr/lib/nodejs/fstream/lib/dir-writer.js:36:23',
+45 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+45 error      'Object.oncomplete (fs.js:107:15)' ] }
+46 error Please try running this command again as root/Administrator.
+47 error System Linux 3.13.0-44-generic
+48 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "duo"
+49 error cwd /home/natan/repos/shockwave
+50 error node -v v0.10.25
+51 error npm -v 1.3.10
+52 error path /usr/local/lib/node_modules/duo
+53 error fstream_path /usr/local/lib/node_modules/duo
+54 error fstream_type Directory
+55 error fstream_class DirWriter
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/duo'
+59 error fstream_stack /usr/lib/nodejs/fstream/lib/dir-writer.js:36:23
+59 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+59 error fstream_stack Object.oncomplete (fs.js:107:15)
+60 verbose exit [ 3, true ]
