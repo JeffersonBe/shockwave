@@ -27,9 +27,9 @@ VMMMP" dMP dMP  VMMMP"  VMMMP" dMP dMP  VMMMPVMMP" dMP dMP    VP"  dMMMMMP
 <body>
   <div class="row">
     @include('navigation')
-    <div class="container main">
+    <main class="container">
       @yield('content')
-    </div>
+    </main>
     @include('footer')
   </diV>
 

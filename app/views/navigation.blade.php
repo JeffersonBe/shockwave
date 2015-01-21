@@ -8,7 +8,7 @@
         <i class="fa fa-facebook"></i>
       </a>
     </div>
-    <div class="logo"></div>
+    <div id="logo" class="animated pulse"></div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">

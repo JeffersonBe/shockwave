@@ -1,5 +1,5 @@
-<div class="footer container">
+<footer class="container">
   <div clss="col-md-5">
     <p>&copy; 2015 Tous droits réservés Shockwave</p>
   </div>
-</div>
+</footer>
