@@ -1,3 +1,10 @@
+<!--
+.dMMMb  dMP dMP .aMMMb  .aMMMb  dMP dMP dMP dMP dMP .aMMMb  dMP dMP dMMMMMP
+dMP" VP dMP dMP dMP"dMP dMP"VMP dMP.dMP dMP dMP dMP dMP"dMP dMP dMP dMP
+VMMMb  dMMMMMP dMP dMP dMP     dMMMMK" dMP dMP dMP dMMMMMP dMP dMP dMMMP
+dP .dMP dMP dMP dMP.aMP dMP.aMP dMP"AMF dMP.dMP.dMP dMP dMP  YMvAP" dMP
+VMMMP" dMP dMP  VMMMP"  VMMMP" dMP dMP  VMMMPVMMP" dMP dMP    VP"  dMMMMMP
+-->
 <!doctype html>
 <html>
 <head>
@@ -22,7 +29,7 @@
     @include('navigation')
     <div class="container main">
       @yield('content')
-    <div>
+    </div>
     @include('footer')
   </diV>
 
