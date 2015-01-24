@@ -43,6 +43,6 @@ class HomeController extends BaseController {
 
 	public function showPhotoVideo()
 	{
-		return View::make('fun');
+		return View::make('photos-videos');
 	}
 }

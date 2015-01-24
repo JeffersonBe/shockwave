@@ -1,5 +1,6 @@
 header {
-  background-image: url('/img/pattern.png');
+  background-image: url("/img/background.jpg");
+  background-position: 300px;
 }
 #logo {
   background-image: url(/img/logo.png);
@@ -18,14 +19,14 @@ header {
   top: 15px;
   color: #0a1738;
 }
-$bgDefault: #0a1738;
-$bgHighlight: #fff;
+$bgDefault: #01333E;
+$bgHighlight: rgba(255, 255, 255, 0.52);
 $colDefault: #ecf0f1;
 $colHighlight: #fff;
 $colHighlightHover: black;
 .navbar-default {
   background-color: $bgDefault;
-  // border-color: $bgHighlight;
+  border-color: $bgHighlight;
   .navbar-brand {
     color: $colDefault;
     &:hover,
