@@ -9,15 +9,14 @@ header {
   background-size: 188px 100px;
   margin: 15px auto;
   background-repeat: no-repeat;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
 }
 .social {
   font-size: 35px;
   position: absolute;
   top: 15px;
-  color: #0a1738;
+  a {
+    color: #eaeef5;
+  }
 }
 $bgDefault: #01333E;
 $bgHighlight: rgba(255, 255, 255, 0.52);
