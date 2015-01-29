@@ -1,6 +1,12 @@
 @extends('layout')
 @section('content')
 <div class="col-md-10">
+@if (Session::has('problem'))
+   <div class="alert alert-danger">{{ Session::get('message') }}</div>
+@endif
+@if (Session::has('success'))
+   <div class="alert alert-info">{{ Session::get('message') }}</div>
+@endif
 {{
 
   Former::horizontal_open()
@@ -36,10 +42,10 @@
   '16h-18h'  => '16h-18h'
   ))->required(),
 
-  Former::select('Heure de livraison')->options(array(
-  'Formule1'   => 'Formule 1',
-  'Formule2'  => 'Formule 2',
-  'Formule3'  => 'Formule 3',
+  Former::select('Formule')->options(array(
+  'Formule1'   => 'Formule 1: Fajitas',
+  'Formule2'  => 'Formule 2: Fusilli à la Bolognaise',
+  'Formule3'  => 'Formule 3: Petit Déjeuner Shockwave',
   ))->required(),
 
   Former::textarea('Commentaires')

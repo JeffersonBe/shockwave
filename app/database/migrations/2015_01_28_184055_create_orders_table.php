@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration {
 			$table->string('formule');
 			$table->string('address_delivery');
 			$table->string('date_delivery');
+			$table->string('hour_delivery');
 			$table->string('comment');
 			$table->boolean('delivered')->default(false);
 			$table->timestamps();
