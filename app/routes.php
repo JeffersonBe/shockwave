@@ -17,7 +17,9 @@ Route::get('/programme','HomeController@showProgramme');
 Route::get('/pougnes','HomeController@showPougnes');
 Route::get('/photoVideo','HomeController@showPhotoVideo');
 Route::get('/sponsors', 'HomeController@showSponsors');
+
 Route::get('/ptit-dej', 'BreakfastController@showForm');
+Route::post('/ptit-dej', 'BreakfastController@create');
 //
 
 // Confide routes

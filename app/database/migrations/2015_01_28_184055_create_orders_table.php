@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('member_id')->unsigned();
-			$table->integer('formule_id')->unsigned();
+			$table->string('formule');
 			$table->string('address_delivery');
 			$table->string('date_delivery');
 			$table->string('comment');

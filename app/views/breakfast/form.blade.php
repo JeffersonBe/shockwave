@@ -8,7 +8,7 @@
   ->secure()
   ->rules(array(
     'Prénom', 'nom'         => 'required|max:20|alpha',
-    'Numéro de téléphone portable'   => '^((\+|00)33\s?|0)[679](\s?\d{2}){4}$',
+    'Numéro de téléphone portable'   => '^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$',
     'Date de Livraison'     => array('after:2015-02-05','before:2015-03-01'),
     'Adresse email Telecom' => '^[A-Z0-9._%+-]+@tem-tsp.eu$'
   ))
@@ -20,7 +20,7 @@
 
   Former::text('Nom'),
 
-  Former::phone('Numéro de téléphone portable')->required(),
+  Former::tel('Numéro de téléphone')->required(),
 
   Former::email('Adresse email Telecom')->required(),
 
@@ -29,14 +29,18 @@
   Former::date('Date de Livraison')->required()->pattern('after:2015-02-05'),
 
   Former::select('Heure de livraison')->options(array(
-  1  => '8h-10h',
-  2  => '10h-12h',
-  3  => '12h-14h',
-  4  => '14h-16h',
-  5  => '16h-18h'
+  '8h-10h'   => '8h-10h',
+  '10h-12h'  => '10h-12h',
+  '12h-14h'  => '12h-14h',
+  '14h-16h'  => '14h-16h',
+  '16h-18h'  => '16h-18h'
   ))->required(),
 
-  Former::select('Choissisez votre menu')->fromQuery(Formule::all(), 'name')->required(),
+  Former::select('Heure de livraison')->options(array(
+  'Formule1'   => 'Formule 1',
+  'Formule2'  => 'Formule 2',
+  'Formule3'  => 'Formule 3',
+  ))->required(),
 
   Former::textarea('Commentaires')
   ->rows(10)->columns(20)
