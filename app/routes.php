@@ -45,7 +45,7 @@ Menu::make('MyNavBar', function($menu){
   $menu->add('Présentation', 'presentation');
   $menu->add('Programme', 'programme');
   $menu->add('Pougnes',  'pougnes');
-  $menu->add('Photos/Vidéo', 'photoVideo');
+  $menu->add('Photos/Vidéo/Jeux', 'photoVideo');
   // $menu->add('Sponsors', 'sponsors');
 
 });
