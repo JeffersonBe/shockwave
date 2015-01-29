@@ -492,6 +492,7 @@ return array(
     'Lavary\\Menu\\Menu' => $vendorDir . '/lavary/laravel-menu/src/Lavary/Menu/Menu.php',
     'Lavary\\Menu\\ServiceProvider' => $vendorDir . '/lavary/laravel-menu/src/Lavary/Menu/ServiceProvider.php',
     'Math_BigInteger' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
+    'Menu' => $baseDir . '/app/models/Menu.php',
     'Monolog\\ErrorHandler' => $vendorDir . '/monolog/monolog/src/Monolog/ErrorHandler.php',
     'Monolog\\Formatter\\ChromePHPFormatter' => $vendorDir . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
     'Monolog\\Formatter\\ElasticaFormatter' => $vendorDir . '/monolog/monolog/src/Monolog/Formatter/ElasticaFormatter.php',

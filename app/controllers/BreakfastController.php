@@ -2,8 +2,8 @@
 
 class BreakfastController extends \BaseController {
 
-	public function create(){
-	
+	public function showForm(){
+		return View::make('breakfast.form');
 	}
 
 }

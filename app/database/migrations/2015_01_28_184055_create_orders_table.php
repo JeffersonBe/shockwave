@@ -16,15 +16,15 @@ class CreateOrdersTable extends Migration {
 		Schema::create('orders', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('members_id')->unsigned();
-			$table->integer('menus_id')->unsigned();
+			$table->integer('member_id')->unsigned();
+			$table->integer('formule_id')->unsigned();
 			$table->string('address_delivery');
 			$table->string('date_delivery');
 			$table->string('comment');
 			$table->boolean('delivered')->default(false);
 			$table->timestamps();
 
-			$table->foreign('members_id')
+			$table->foreign('member_id')
 			->references('id')->on('members')
 			->onDelete('cascade');
 		});
