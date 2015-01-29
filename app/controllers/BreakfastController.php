@@ -10,6 +10,7 @@ class BreakfastController extends \BaseController {
 		$input = Input::all();
 		$mail = Input::get("Adresse_email_Telecom");
 
+
 		// Check if user already exist
 		if($this->memberExist($mail)){
 			Session::flash('problem', "Vous êtes gourmand mais vous avez déjà fait une commande.");
@@ -25,7 +26,6 @@ class BreakfastController extends \BaseController {
 			$member->confirmation_code = md5(uniqid(mt_rand(), true));;
 			$member->save();
 
-
 			/* Add Order */
 			$order = new Order;
 			$order->member_id = $member->id;
@@ -35,6 +35,28 @@ class BreakfastController extends \BaseController {
 			$order->hour_delivery = Input::get("Heure_de_livraison");
 			$order->comment = Input::get("Commentaires");
 			$order->save();
+
+			$first_name = $member->first_name;
+			$email = $member->email;
+			$formule = $order->formule;
+			$confirmation_code = $member->confirmation_code;
+			$data = [
+				'first_name'=> $first_name,
+				'email'			=> $email,
+				'formule' 	=> $formule,
+
+			];
+
+			// dd($data);
+
+			Mail::send('emails.breakfast.order',
+				array('first_name'=> $member->first_name,
+							'formule' 	=> $order->formule,
+							'code' 			=> $member->confirmation_code),
+				function($message) use ($member, $order)
+			{
+				$message->to($member->email, $member->first_name)->subject('Commande Shockwave');
+			});
 
 			Session::flash('success', "Commande enregistrée, on est déjà aux fourneaux. Il te manque plus qu'à la valider. Check tes mails!");
 			return Redirect::back();

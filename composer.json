@@ -9,7 +9,8 @@
 		"lavary/laravel-menu": "dev-master",
 		"zizaco/confide": "~4.0@dev",
 		"zizaco/entrust": "1.2.*@dev",
-		"anahkiasen/former": "dev-master"
+		"anahkiasen/former": "dev-master",
+		"guzzlehttp/guzzle": "~4.0"
 	},
 	"autoload": {
 		"classmap": [
