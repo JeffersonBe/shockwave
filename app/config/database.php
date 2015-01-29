@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'ShockwaveLaravel',
+			'database'  => 'laravel',
 			'username'  => 'root',
 			'password'  => '972mariadb972',
 			'charset'   => 'utf8',
