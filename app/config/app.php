@@ -124,6 +124,7 @@ return array(
 		'Lavary\Menu\ServiceProvider',
 		'Zizaco\Confide\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
+		'Former\FormerServiceProvider',
 
 	),
 
@@ -194,6 +195,7 @@ return array(
 		'Menu'              => 'Lavary\Menu\Facade',
 		'Confide'           => 'Zizaco\Confide\Facade',
 		'Entrust'						=> 'Zizaco\Entrust\EntrustFacade',
+		'Former' 						=> 'Former\Facades\Former',
 
 	),
 

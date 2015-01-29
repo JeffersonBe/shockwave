@@ -9,4 +9,7 @@ return array(
     'Zizaco\\Entrust\\' => array($vendorDir . '/zizaco/entrust/src/Entrust'),
     'Zizaco\\Confide\\' => array($vendorDir . '/zizaco/confide/src/Confide'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Laravel\\' => array($vendorDir . '/anahkiasen/former/src/Laravel'),
+    'HtmlObject\\' => array($vendorDir . '/anahkiasen/html-object/src'),
+    'Former\\' => array($vendorDir . '/anahkiasen/former/src/Former', $vendorDir . '/anahkiasen/former/tests'),
 );
