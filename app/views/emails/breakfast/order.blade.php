@@ -221,7 +221,7 @@ ul li, ol li {
         <table>
           <tr>
             <td align="center">
-              <p>Shockwave 2015</a>.
+              <p>Shockwave 2015</a>
               </p>
             </td>
           </tr>
