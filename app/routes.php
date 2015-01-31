@@ -20,6 +20,7 @@ Route::get('/sponsors', 'HomeController@showSponsors');
 
 Route::get('/ptit-dej', 'BreakfastController@showForm');
 Route::post('/ptit-dej', 'BreakfastController@create');
+Route::get('/ptit-dej/confirm', 'BreakfastController@checkCode');
 //
 
 // Confide routes

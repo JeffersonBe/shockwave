@@ -10,7 +10,6 @@ class BreakfastController extends \BaseController {
 		$input = Input::all();
 		$mail = Input::get("Adresse_email_Telecom");
 
-
 		// Check if user already exist
 		if($this->memberExist($mail)){
 			Session::flash('problem', "Vous êtes gourmand mais vous avez déjà fait une commande.");
@@ -36,21 +35,9 @@ class BreakfastController extends \BaseController {
 			$order->comment = Input::get("Commentaires");
 			$order->save();
 
-			$first_name = $member->first_name;
-			$email = $member->email;
-			$formule = $order->formule;
-			$confirmation_code = $member->confirmation_code;
-			$data = [
-				'first_name'=> $first_name,
-				'email'			=> $email,
-				'formule' 	=> $formule,
-
-			];
-
-			// dd($data);
-
 			Mail::send('emails.breakfast.order',
 				array('first_name'=> $member->first_name,
+							'id'				=> $member->id,
 							'formule' 	=> $order->formule,
 							'code' 			=> $member->confirmation_code),
 				function($message) use ($member, $order)
@@ -64,9 +51,52 @@ class BreakfastController extends \BaseController {
 
 	}
 
+	/* Validate code */
+	public function checkCode(){
+		$id = Input::get("id");
+		$code = Input::get("code");
+
+		$member = Member::where('confirmation_code', $code)->first();
+		if(!$member){
+			Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
+			return Redirect::to('ptit-dej');
+		}
+		else{
+			$idMember = $member->id;
+			$codeMember = $member->confirmation_code;
+			$statusConfirmed = $member->confirmed;
+
+			if($idMember=$id){
+
+				if($codeMember=$code){
+
+					if($statusConfirmed===0){
+						$member->confirmed = 1;
+						$member->update();
+
+						Session::flash('success', "Ton compte est validé, ça y est là on peut vraiment cuisiner");
+						return Redirect::to('ptit-dej');
+					}
+					else{
+						Session::flash('problem', "Tu as déjà validé ton compte ! Ah la gourmandise … :-) ");
+						return Redirect::to('ptit-dej');
+					}
+				}
+				else{
+					Session::flash('problem', "C'est pas le bon code … Clique-bien sur le lien si tu veux manger!");
+					return Redirect::to('ptit-dej');
+				}
+			}
+			else{
+				Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
+				return Redirect::to('ptit-dej');
+			}
+		}
+	}
 
 	public function memberExist($memberEmail) {
 		$member = Member::whereEmail($memberEmail)->first();
+
 		// dd($member);
 		if(!$member){
 			return false;
