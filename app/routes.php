@@ -48,7 +48,8 @@ Menu::make('MyNavBar', function($menu){
   $menu->add('Présentation', 'presentation');
   $menu->add('Programme', 'programme');
   $menu->add('Pougnes',  'pougnes');
-  $menu->add('Photos/Vidéo', 'photoVideo');
   $menu->add('<i class="fa fa-cutlery"></i> Ptit-déj', 'ptit-dej');
+  $menu->add('Photos/Vidéo/Jeux', 'photoVideo');
+  // $menu->add('Sponsors', 'sponsors');
 
 });

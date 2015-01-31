@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="col-md-8">
+<article class="col-md-8">
   <h1 class="text-center">Bienvenue sur le site de Shockwave !</h1><br/>
   <p>
     Nous sommes heureux de vous présenter notre site web où vous pourrez découvrir qui nous sommes et nos projets pour l'INT.
@@ -11,7 +11,7 @@
     Notre site web s'étoffera avec le temps au fur et à mesure des différents événements.
     Nous vous souhaitons une agréable visite !</p>
   </p>
-</div>
+</article>
 <div class="col-md-3 col-md-offset-1">
   <div class="col-md-12">
       <div class="panel panel-default">
