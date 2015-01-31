@@ -53,45 +53,61 @@ class BreakfastController extends \BaseController {
 
 	/* Validate code */
 	public function checkCode(){
-		$id = Input::get("id");
-		$code = Input::get("code");
 
-		$member = Member::where('confirmation_code', $code)->first();
-		if(!$member){
-			Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
+		$rules = array(
+				'id'		=> 'required|numeric',
+				'code' 	=> 'required|alpha_num',
+		);
+
+		$validator = Validator::make(Input::all(), $rules);
+
+		if ($validator->fails())
+		{
+			Session::flash('problem', "Le lien que vous avez ajouté n'est pas correct.");
 			return Redirect::to('ptit-dej');
 		}
 		else{
-			$idMember = $member->id;
-			$codeMember = $member->confirmation_code;
-			$statusConfirmed = $member->confirmed;
+			$id = Input::get("id");
+			$code = Input::get("code");
 
-			if($idMember=$id){
+			$member = Member::where('confirmation_code', $code)->first();
+			if(!$member){
+				Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
+				return Redirect::to('ptit-dej');
+			}
+			else{
+				$idMember = $member->id;
+				$codeMember = $member->confirmation_code;
+				$statusConfirmed = $member->confirmed;
 
-				if($codeMember=$code){
+				if($idMember=$id){
 
-					if($statusConfirmed===0){
-						$member->confirmed = 1;
-						$member->update();
+					if($codeMember=$code){
 
-						Session::flash('success', "Ton compte est validé, ça y est là on peut vraiment cuisiner");
-						return Redirect::to('ptit-dej');
+						if($statusConfirmed===0){
+							$member->confirmed = 1;
+							$member->update();
+
+							Session::flash('success', "Ton compte est validé, ça y est là on peut vraiment cuisiner");
+							return Redirect::to('ptit-dej');
+						}
+						else{
+							Session::flash('problem', "Tu as déjà validé ton compte ! Ah la gourmandise … :-) ");
+							return Redirect::to('ptit-dej');
+						}
 					}
 					else{
-						Session::flash('problem', "Tu as déjà validé ton compte ! Ah la gourmandise … :-) ");
+						Session::flash('problem', "C'est pas le bon code … Clique-bien sur le lien si tu veux manger!");
 						return Redirect::to('ptit-dej');
 					}
 				}
 				else{
-					Session::flash('problem', "C'est pas le bon code … Clique-bien sur le lien si tu veux manger!");
+					Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
 					return Redirect::to('ptit-dej');
 				}
 			}
-			else{
-				Session::flash('problem', "C'est pas le bon utilisateur… Humm on va faire comme si on avait rien vu …");
-				return Redirect::to('ptit-dej');
-			}
 		}
+
 	}
 
 	public function memberExist($memberEmail) {
