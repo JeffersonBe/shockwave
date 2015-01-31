@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="col-md-10">
+<div class="col-md-6 col-md-offset-3">
 @if (Session::has('problem'))
   <div class="alert alert-danger">
     {{ Session::get('message') }}
@@ -11,32 +11,38 @@
    <div class="alert alert-info">{{ Session::get('success') }}</div>
 @endif
 
-{{
+@if($errors->any())
+<div class="alert alert-danger">{{$errors->first()}}</div>
+@endif
 
-  Former::horizontal_open()
+{{
+  Former::framework('TwitterBootstrap3'),
+  Former::vertical_open()
   ->id('FormBreakfast')
   ->secure()
   ->rules(array(
-    'Prénom', 'nom'         => 'required|max:20|alpha',
-    'Numéro de téléphone portable'   => '^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$',
-    'Date de Livraison'     => array('after:2015-02-05','before:2015-03-01'),
-    'Adresse email Telecom' => '^[A-Z0-9._%+-]+@tem-tsp.eu$'
+    'Nom'                   => 'required|max:15|alpha',
+    'Prénom'                => 'required|max:15|alpha',
+    'Numéro de téléphone'   => array('required','numeric','max:10'),
+    'Adresse email Telecom' => array('required','^[A-Z0-9._%+-]+@tem-tsp.eu$'),
+    'Date de Livraison'     => array('required','after:2015-02-05','before:2015-03-01'),
+    'Heure de livraison'    => array('required', 'max:7')
   ))
   ->withErrors()
   ->method('POST')
   ->setOption('live_validation', true),
 
-  Former::text('Prénom')->required(),
+  Former::text('Prénom'),
 
   Former::text('Nom'),
 
-  Former::tel('Numéro de téléphone')->required(),
+  Former::tel('Numéro de téléphone'),
 
-  Former::email('Adresse email Telecom')->required(),
+  Former::email('Adresse email Telecom'),
 
-  Former::text('Adresse de livraison')->required(),
+  Former::text('Adresse de livraison'),
 
-  Former::date('Date de Livraison')->required()->pattern('after:2015-02-05'),
+  Former::date('Date de Livraison'),
 
   Former::select('Heure de livraison')->options(array(
   '8h-10h'   => '8h-10h',
@@ -44,7 +50,7 @@
   '12h-14h'  => '12h-14h',
   '14h-16h'  => '14h-16h',
   '16h-18h'  => '16h-18h'
-  ))->required(),
+  )),
 
   Former::select('Formule')->options(array(
   'Formule1'   => 'Formule 1: Fajitas',

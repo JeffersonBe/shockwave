@@ -15,57 +15,66 @@ class BreakfastController extends \BaseController {
 			Session::flash('problem', "Vous êtes gourmand mais vous avez déjà fait une commande.");
 			return Redirect::back();
 		}
-		else{
-			/* Add Member */
-			$member = new Member;
-			$member->first_name = Input::get("Prénom");
-			$member->last_name = Input::get("Nom");
-			$member->email = Input::get("Adresse_email_Telecom");
-			$member->number = Input::get("Numéro_de_téléphone");
-			$member->confirmation_code = md5(uniqid(mt_rand(), true));;
-			$member->save();
 
-			/* Add Order */
-			$order = new Order;
-			$order->member_id = $member->id;
-			$order->formule = Input::get("Formule");
-			$order->address_delivery = Input::get("Adresse_de_livraison");
-			$order->date_delivery = Input::get("Date_de_Livraison");
-			$order->hour_delivery = Input::get("Heure_de_livraison");
-			$order->comment = Input::get("Commentaires");
-			$order->save();
+		/* Add Member */
+		$member = new Member;
+		$member->first_name = Input::get("Prénom");
+		$member->last_name = Input::get("Nom");
+		$member->email = Input::get("Adresse_email_Telecom");
+		$member->number = Input::get("Numéro_de_téléphone");
+		$member->confirmation_code = md5(uniqid(mt_rand(), true));;
+		$member->save();
 
-			Mail::send('emails.breakfast.order',
-				array('first_name'=> $member->first_name,
-							'id'				=> $member->id,
-							'formule' 	=> $order->formule,
-							'code' 			=> $member->confirmation_code),
-				function($message) use ($member, $order)
-			{
-				$message->to($member->email, $member->first_name)->subject('Commande Shockwave');
-			});
+		/* Add Order */
+		$order = new Order;
+		$order->member_id = $member->id;
+		$order->formule = Input::get("Formule");
+		$order->address_delivery = Input::get("Adresse_de_livraison");
+		$order->date_delivery = Input::get("Date_de_Livraison");
+		$order->hour_delivery = Input::get("Heure_de_livraison");
+		$order->comment = Input::get("Commentaires");
+		$order->save();
 
-			Session::flash('success', "Commande enregistrée, on est déjà aux fourneaux. Il te manque plus qu'à la valider. Check tes mails!");
-			return Redirect::back();
-		}
+		Mail::send('emails.breakfast.order',
+			array('first_name'=> $member->first_name,
+						'id'				=> $member->id,
+						'formule' 	=> $order->formule,
+						'code' 			=> $member->confirmation_code),
+			function($message) use ($member, $order)
+		{
+			$message->to($member->email, $member->first_name)->subject('Commande Shockwave');
+		});
+
+		Session::flash('success', "Commande enregistrée, on est déjà aux fourneaux. Il te manque plus qu'à la valider. Check tes mails!");
+		return Redirect::back();
 
 	}
 
-	/* Validate code */
+	/*
+	*	Get @id and @code from mail to validate account
+	*
+	*
+	*/
 	public function checkCode(){
 
+		/* Input checkup */
 		$rules = array(
 				'id'		=> 'required|numeric',
 				'code' 	=> 'required|alpha_num',
 		);
+		$messages = array(
+				'required'		=> "L':attribute est requis",
+				'numeric'    	=> "L':attribute doit être un chiffre",
+				'alpha_num'		=> "Le :attribute doit être alpha-numérique",
+		);
 
-		$validator = Validator::make(Input::all(), $rules);
+		$validator = Validator::make(Input::all(), $rules, $messages);
 
 		if ($validator->fails())
 		{
-			Session::flash('problem', "Le lien que vous avez ajouté n'est pas correct.");
-			return Redirect::to('ptit-dej');
+			return Redirect::to('ptit-dej')->withErrors($validator);;
 		}
+
 		$id = Input::get("id");
 		$code = Input::get("code");
 
@@ -87,7 +96,7 @@ class BreakfastController extends \BaseController {
 			return Redirect::to('ptit-dej');
 		}
 		elseif($statusConfirmed===1){
-			Session::flash('problem', "Tu as déjà validé ton compte ! Ah la gourmandise … :-) ");
+			Session::flash('problem', "Tu as déjà validé ton compte ! Ah la gourmandise … :-)");
 			return Redirect::to('ptit-dej');
 		}
 
