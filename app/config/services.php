@@ -15,8 +15,8 @@ return array(
 	*/
 
 	'mailgun' => array(
-		'domain' => 'shockwave2015.fr',
-		'secret' => 'key-5h-qghx441t1z0g8igoo-pef5ak3jyp6',
+		'domain' => $_ENV['MAILGUN_DOMAIN'],
+		'secret' => $_ENV['MAILGUN_SECRET'],
 	),
 
 	'mandrill' => array(
