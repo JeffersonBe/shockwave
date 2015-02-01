@@ -17,6 +17,7 @@ Route::get('/programme','HomeController@showProgramme');
 Route::get('/pougnes','HomeController@showPougnes');
 Route::get('/photoVideo','HomeController@showPhotoVideo');
 Route::get('/sponsors', 'HomeController@showSponsors');
+Route::get('/jeux', 'HomeController@showJeux');
 
 Route::get('/ptit-dej', 'BreakfastController@showForm');
 Route::post('/ptit-dej', 'BreakfastController@create');
@@ -49,7 +50,8 @@ Menu::make('MyNavBar', function($menu){
   $menu->add('Programme', 'programme');
   $menu->add('Pougnes',  'pougnes');
   $menu->add('<i class="fa fa-cutlery"></i> Ptit-déj', 'ptit-dej');
-  $menu->add('Photos/Vidéo/Jeux', 'photoVideo');
+  $menu->add('Photos/Vidéos', 'photoVideo');
+  $menu->add('Jeux','jeux');
   // $menu->add('Sponsors', 'sponsors');
 
 });

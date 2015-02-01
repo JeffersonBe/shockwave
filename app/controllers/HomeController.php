@@ -45,4 +45,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('photos-videos');
 	}
+	
+	public function showJeux()
+	{
+		return View::make('jeux');
+	}
 }

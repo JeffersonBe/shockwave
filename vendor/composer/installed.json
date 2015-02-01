@@ -1858,75 +1858,6 @@
         ]
     },
     {
-        "name": "zizaco/confide",
-        "version": "4.2.0",
-        "version_normalized": "4.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Zizaco/confide.git",
-            "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Zizaco/confide/zipball/e2be5ff2b744c4912ff78c7e690db5d314696803",
-            "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/support": "~4.2|~5.0",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "illuminate/auth": "~4.2",
-            "illuminate/console": "~4.2",
-            "illuminate/database": "~4.2",
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4.0",
-            "satooshi/php-coveralls": "~0.6"
-        },
-        "suggest": {
-            "zizaco/entrust": "add Role-based Permissions to Laravel 4"
-        },
-        "time": "2015-01-22 00:43:23",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev",
-                "dev-username-optional": "4.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/migrations",
-                "src/commands"
-            ],
-            "psr-4": {
-                "Zizaco\\Confide\\": "src/Confide/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrew Elkins",
-                "homepage": "http://www.andrewelkins.com"
-            },
-            {
-                "name": "Zizaco Zizuini",
-                "homepage": "http://www.zizaco.net"
-            }
-        ],
-        "description": "Confide is an authentication solution for Laravel 4",
-        "keywords": [
-            "auth",
-            "illuminate",
-            "laravel"
-        ]
-    },
-    {
         "name": "anahkiasen/html-object",
         "version": "1.4.1",
         "version_normalized": "1.4.1.0",
@@ -2148,6 +2079,74 @@
             "http client",
             "rest",
             "web service"
+        ]
+    },
+    {
+        "name": "zizaco/confide",
+        "version": "4.3.0-beta.1",
+        "version_normalized": "4.3.0.0-beta1",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Zizaco/confide.git",
+            "reference": "1d384b45ae71f667984a16d90b6594abfd5ae50a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Zizaco/confide/zipball/1d384b45ae71f667984a16d90b6594abfd5ae50a",
+            "reference": "1d384b45ae71f667984a16d90b6594abfd5ae50a",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~4.2|~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "illuminate/auth": "~4.2",
+            "illuminate/console": "~4.2",
+            "illuminate/database": "~4.2",
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4.0",
+            "satooshi/php-coveralls": "~0.6"
+        },
+        "suggest": {
+            "zizaco/entrust": "add Role-based Permissions to Laravel 4"
+        },
+        "time": "2015-01-31 20:12:27",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/migrations",
+                "src/commands"
+            ],
+            "psr-4": {
+                "Zizaco\\Confide\\": "src/Confide/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrew Elkins",
+                "homepage": "http://www.andrewelkins.com"
+            },
+            {
+                "name": "Zizaco Zizuini",
+                "homepage": "http://www.zizaco.net"
+            }
+        ],
+        "description": "Confide is an authentication solution for Laravel 4",
+        "keywords": [
+            "auth",
+            "illuminate",
+            "laravel"
         ]
     }
 ]

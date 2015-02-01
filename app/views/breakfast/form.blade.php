@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
-<div class="col-md-6 col-md-offset-3">
+<!---->
+<div class="container">
 @if (Session::has('problem'))
   <div class="alert alert-danger">
     {{ Session::get('message') }}
@@ -14,6 +15,41 @@
 @if($errors->any())
 <div class="alert alert-danger">{{$errors->first()}}</div>
 @endif
+
+
+	<div class="row">
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   				<h3 class="panel-title">Fajitas</h3>
+  				</div>
+  				<div class="panel-body">
+    				<img src="img/fajitas.jpg" class="img-responsive" alt="fajitas"/>
+  				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   				<h3 class="panel-title">Fusilli à la bolognaise</h3>
+  				</div>
+  				<div class="panel-body">
+    				<img src="img/fusilli.jpg" class="img-responsive "alt="fusilli à la bolognaise" />
+  				</div>
+			</div>		
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-primary">
+  				<div class="panel-heading">
+   				<h3 class="panel-title">Petit déjeuner Shockwave</h3>
+  				</div>
+  				<div class="panel-body">
+  				</div>
+			</div>				
+		</div>
+	</div>
+
+<div class="col-md-6 col-md-offset-3">
 
 {{
   Former::framework('TwitterBootstrap3'),
@@ -68,5 +104,6 @@
   Former::close();
 
 }}
+</div>
 </div>
 @stop
