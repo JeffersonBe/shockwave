@@ -63,7 +63,7 @@ class BreakfastController extends \BaseController {
 				'code' 	=> 'required|alpha_num',
 		);
 		$messages = array(
-				'required'		=> "L':attribute est requis",
+				'required'		=> "Le :attribute est requis",
 				'numeric'    	=> "L':attribute doit être un chiffre",
 				'alpha_num'		=> "Le :attribute doit être alpha-numérique",
 		);
@@ -103,7 +103,7 @@ class BreakfastController extends \BaseController {
 		$member->confirmed = 1;
 		$member->update();
 
-		Session::flash('success', "Ton compte est validé, ça y est là on peut vraiment cuisiner");
+		Session::flash('success', "Ton compte est validé, ça y est là on peut vraiment cuisiner.");
 		return Redirect::to('ptit-dej');
 	}
 

@@ -27,7 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('jefferson'),
-	'production' => array('localhost'),
+	'production' => array('shockwave'),
 
 ));
 
