@@ -125,6 +125,7 @@ return array(
 		'Zizaco\Confide\ServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Former\FormerServiceProvider',
+		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
 
 	),
 

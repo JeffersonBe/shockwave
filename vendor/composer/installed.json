@@ -1858,75 +1858,6 @@
         ]
     },
     {
-        "name": "zizaco/confide",
-        "version": "4.2.0",
-        "version_normalized": "4.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Zizaco/confide.git",
-            "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Zizaco/confide/zipball/e2be5ff2b744c4912ff78c7e690db5d314696803",
-            "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/support": "~4.2|~5.0",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "illuminate/auth": "~4.2",
-            "illuminate/console": "~4.2",
-            "illuminate/database": "~4.2",
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4.0",
-            "satooshi/php-coveralls": "~0.6"
-        },
-        "suggest": {
-            "zizaco/entrust": "add Role-based Permissions to Laravel 4"
-        },
-        "time": "2015-01-22 00:43:23",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev",
-                "dev-username-optional": "4.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/migrations",
-                "src/commands"
-            ],
-            "psr-4": {
-                "Zizaco\\Confide\\": "src/Confide/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Andrew Elkins",
-                "homepage": "http://www.andrewelkins.com"
-            },
-            {
-                "name": "Zizaco Zizuini",
-                "homepage": "http://www.zizaco.net"
-            }
-        ],
-        "description": "Confide is an authentication solution for Laravel 4",
-        "keywords": [
-            "auth",
-            "illuminate",
-            "laravel"
-        ]
-    },
-    {
         "name": "anahkiasen/html-object",
         "version": "1.4.1",
         "version_normalized": "1.4.1.0",
@@ -2148,6 +2079,128 @@
             "http client",
             "rest",
             "web service"
+        ]
+    },
+    {
+        "name": "zizaco/confide",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Zizaco/confide.git",
+            "reference": "2b9d2a0a4e6b1a29417e450dd3450ec1941aca49"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Zizaco/confide/zipball/2b9d2a0a4e6b1a29417e450dd3450ec1941aca49",
+            "reference": "2b9d2a0a4e6b1a29417e450dd3450ec1941aca49",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "~4.2|~5.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "illuminate/auth": "~4.2",
+            "illuminate/console": "~4.2",
+            "illuminate/database": "~4.2",
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4.0",
+            "satooshi/php-coveralls": "~0.6"
+        },
+        "suggest": {
+            "zizaco/entrust": "add Role-based Permissions to Laravel 4"
+        },
+        "time": "2015-02-01 16:57:46",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/migrations",
+                "src/commands"
+            ],
+            "psr-4": {
+                "Zizaco\\Confide\\": "src/Confide/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andrew Elkins",
+                "homepage": "http://www.andrewelkins.com"
+            },
+            {
+                "name": "Zizaco Zizuini",
+                "homepage": "http://www.zizaco.net"
+            }
+        ],
+        "description": "Confide is an authentication solution for Laravel 4",
+        "keywords": [
+            "auth",
+            "illuminate",
+            "laravel"
+        ]
+    },
+    {
+        "name": "greggilbert/recaptcha",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/greggilbert/recaptcha.git",
+            "reference": "9c39f8b8124002b6830eeb1bc299039df9dc558c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/9c39f8b8124002b6830eeb1bc299039df9dc558c",
+            "reference": "9c39f8b8124002b6830eeb1bc299039df9dc558c",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "*",
+            "php": ">=5.3.0"
+        },
+        "time": "2014-12-15 04:23:23",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/migrations"
+            ],
+            "psr-0": {
+                "Greggilbert\\Recaptcha": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Greg Gilbert",
+                "email": "greg@greg-gilbert.com"
+            }
+        ],
+        "description": "reCAPTCHA Validator for Laravel 4",
+        "homepage": "http://github.com/greggilbert/recaptcha",
+        "keywords": [
+            "captcha",
+            "laravel",
+            "laravel4",
+            "recaptcha"
         ]
     }
 ]

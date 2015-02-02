@@ -7,6 +7,27 @@ class BreakfastController extends \BaseController {
 	}
 
 	public function create(){
+		dd(Input::get('g-recaptcha-response'));
+		$rules = array(
+			'first_name'      => 'required|max:15|alpha',
+			'last_name'       => 'required|max:15|alpha',
+			'number'          => 'required|numeric',
+			'email'           => 'required|email',
+			'adress_delivery' => 'required|max:25',
+			'date_delivery'   => 'required',
+			'hour_delivery'   => 'required|max:7',
+			'comment'         => 'max:500|alpha-num',
+			'g-recaptcha-response'  => 'required|recaptcha',
+		);
+
+		$validator = Validator::make(Input::all(),$rules);
+
+		if ($validator->fails()) {
+			return Redirect::back()
+				->withErrors($validator)
+				->withInput();
+		}
+
 		$input = Input::all();
 		$mail = Input::get("Adresse_email_Telecom");
 
@@ -18,21 +39,21 @@ class BreakfastController extends \BaseController {
 
 		/* Add Member */
 		$member = new Member;
-		$member->first_name = Input::get("Prénom");
-		$member->last_name = Input::get("Nom");
-		$member->email = Input::get("Adresse_email_Telecom");
-		$member->number = Input::get("Numéro_de_téléphone");
+		$member->first_name = Input::get("first_name");
+		$member->last_name = Input::get("last_name");
+		$member->email = Input::get("email");
+		$member->number = Input::get("number");
 		$member->confirmation_code = md5(uniqid(mt_rand(), true));;
 		$member->save();
 
 		/* Add Order */
 		$order = new Order;
 		$order->member_id = $member->id;
-		$order->formule = Input::get("Formule");
-		$order->address_delivery = Input::get("Adresse_de_livraison");
-		$order->date_delivery = Input::get("Date_de_Livraison");
-		$order->hour_delivery = Input::get("Heure_de_livraison");
-		$order->comment = Input::get("Commentaires");
+		$order->formule = Input::get("formule");
+		$order->address_delivery = Input::get("adress_delivery");
+		$order->date_delivery = Input::get("date_delivery");
+		$order->hour_delivery = Input::get("hour_delivery");
+		$order->comment = Input::get("comment");
 		$order->save();
 
 		Mail::send('emails.breakfast.order',
@@ -72,7 +93,7 @@ class BreakfastController extends \BaseController {
 
 		if ($validator->fails())
 		{
-			return Redirect::to('ptit-dej')->withErrors($validator);;
+			return Redirect::to('ptit-dej')->withErrors($validator)->withInput();
 		}
 
 		$id = Input::get("id");

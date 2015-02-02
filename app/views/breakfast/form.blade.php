@@ -1,19 +1,15 @@
 @extends('layout')
 @section('content')
 <div class="col-md-6 col-md-offset-3">
-@if (Session::has('problem'))
-  <div class="alert alert-danger">
-    {{ Session::get('message') }}
-  </div>
-@endif
+  @if (Session::has('problem'))
+    <div class="alert alert-danger">
+      {{ Session::get('message') }}
+    </div>
+  @endif
 
-@if (Session::has('success'))
-   <div class="alert alert-info">{{ Session::get('success') }}</div>
-@endif
-
-@if($errors->any())
-<div class="alert alert-danger">{{$errors->first()}}</div>
-@endif
+  @if (Session::has('success'))
+     <div class="alert alert-info">{{ Session::get('success') }}</div>
+  @endif
 
 {{
   Former::framework('TwitterBootstrap3'),
@@ -21,46 +17,67 @@
   ->id('FormBreakfast')
   ->secure()
   ->rules(array(
-    'Nom'                   => 'required|max:15|alpha',
-    'Prénom'                => 'required|max:15|alpha',
-    'Numéro de téléphone'   => array('required','numeric','max:10'),
-    'Adresse email Telecom' => array('required','^[A-Z0-9._%+-]+@tem-tsp.eu$'),
-    'Date de Livraison'     => array('required','after:2015-02-05','before:2015-03-01'),
-    'Heure de livraison'    => array('required', 'max:7')
+    'first_name'      => 'required|max:15|alpha',
+    'last_name'       => 'required|max:15|alpha',
+    'number'          => 'required|numeric',
+    'email'           => 'required|email',
+    'adress_delivery' => 'required|max:25',
+    'date_delivery'   => 'required',
+    'hour_delivery'   => 'required|max:7',
+    'comment'         => 'max:500|alpha-num',
+    'g-recaptcha-response'  => 'required|recaptcha',
   ))
   ->withErrors()
   ->method('POST')
   ->setOption('live_validation', true),
 
-  Former::text('Prénom'),
+  Former::text('first_name')
+  ->label("Prénom"),
 
-  Former::text('Nom'),
+  Former::text('last_name')
+  ->label("Nom"),
 
-  Former::tel('Numéro de téléphone'),
+  Former::tel('number')
+  ->label("Numéro de téléphone"),
 
-  Former::email('Adresse email Telecom'),
+  Former::email('email')
+  ->label("Adresse email"),
 
-  Former::text('Adresse de livraison'),
+  Former::text('adress_delivery')
+  ->label("Adresse de livraison"),
 
-  Former::date('Date de Livraison'),
+  Former::select('date_delivery')
+  ->options(array(
+  'mercredi'   => 'mercredi',
+  'jeudi'  => 'jeudi',
+  'vendredi'  => 'vendredi',
+  'samedi'  => 'samedi',
+  'dimanche'  => 'dimanche'
+  ))
+  ->label("Date de livraison"),
 
-  Former::select('Heure de livraison')->options(array(
+  Former::select('hour_delivery')
+  ->options(array(
   '8h-10h'   => '8h-10h',
   '10h-12h'  => '10h-12h',
   '12h-14h'  => '12h-14h',
   '14h-16h'  => '14h-16h',
   '16h-18h'  => '16h-18h'
-  )),
+  ))
+  ->label("Heure de livraison"),
 
-  Former::select('Formule')->options(array(
-  'Formule1'   => 'Formule 1: Fajitas',
+  Former::select('formule')->options(array(
+  'Formule1'  => 'Formule 1: Fajitas',
   'Formule2'  => 'Formule 2: Fusilli à la Bolognaise',
   'Formule3'  => 'Formule 3: Petit Déjeuner Shockwave',
-  ))->required(),
+  ))
+  ->label('Formule'),
 
-  Former::textarea('Commentaires')
-  ->rows(10)->columns(20)
-  ->autofocus(),
+  Former::textarea('comment')
+  ->rows(2)->columns(20)
+  ->label('Commentaires'),
+
+  Form::captcha(),
 
   Former::actions()
   ->large_primary_submit('Submit'),

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "50d8af51dac7ec1057e36132d8e1aced",
+    "hash": "092e1b7dd3562384f38b5a41c19f9a7c",
     "packages": [
         {
             "name": "anahkiasen/former",
@@ -242,6 +242,58 @@
                 "zf2"
             ],
             "time": "2014-10-26 09:05:09"
+        },
+        {
+            "name": "greggilbert/recaptcha",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/greggilbert/recaptcha.git",
+                "reference": "9c39f8b8124002b6830eeb1bc299039df9dc558c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/9c39f8b8124002b6830eeb1bc299039df9dc558c",
+                "reference": "9c39f8b8124002b6830eeb1bc299039df9dc558c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Greggilbert\\Recaptcha": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Gilbert",
+                    "email": "greg@greg-gilbert.com"
+                }
+            ],
+            "description": "reCAPTCHA Validator for Laravel 4",
+            "homepage": "http://github.com/greggilbert/recaptcha",
+            "keywords": [
+                "captcha",
+                "laravel",
+                "laravel4",
+                "recaptcha"
+            ],
+            "time": "2014-12-15 04:23:23"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1953,16 +2005,16 @@
         },
         {
             "name": "zizaco/confide",
-            "version": "4.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/confide.git",
-                "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803"
+                "reference": "2b9d2a0a4e6b1a29417e450dd3450ec1941aca49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/confide/zipball/e2be5ff2b744c4912ff78c7e690db5d314696803",
-                "reference": "e2be5ff2b744c4912ff78c7e690db5d314696803",
+                "url": "https://api.github.com/repos/Zizaco/confide/zipball/2b9d2a0a4e6b1a29417e450dd3450ec1941aca49",
+                "reference": "2b9d2a0a4e6b1a29417e450dd3450ec1941aca49",
                 "shasum": ""
             },
             "require": {
@@ -1983,8 +2035,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev",
-                    "dev-username-optional": "4.1-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -2016,7 +2067,7 @@
                 "illuminate",
                 "laravel"
             ],
-            "time": "2015-01-22 00:43:23"
+            "time": "2015-02-01 16:57:46"
         },
         {
             "name": "zizaco/entrust",
@@ -2091,7 +2142,8 @@
         "lavary/laravel-menu": 20,
         "zizaco/confide": 20,
         "zizaco/entrust": 20,
-        "anahkiasen/former": 20
+        "anahkiasen/former": 20,
+        "greggilbert/recaptcha": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
