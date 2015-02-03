@@ -14,7 +14,6 @@ class BreakfastController extends \BaseController {
 			'number'          => 'required|numeric',
 			'email'           => 'required|email',
 			'adress_delivery' => 'required|max:25',
-			'date_delivery'   => 'required',
 			'hour_delivery'   => 'required|max:7',
 			'comment'         => 'max:500|alpha-num',
 			'g-recaptcha-response'  => 'required|recaptcha',
@@ -51,7 +50,6 @@ class BreakfastController extends \BaseController {
 		$order->member_id = $member->id;
 		$order->formule = Input::get("formule");
 		$order->address_delivery = Input::get("adress_delivery");
-		$order->date_delivery = Input::get("date_delivery");
 		$order->hour_delivery = Input::get("hour_delivery");
 		$order->comment = Input::get("comment");
 		$order->save();

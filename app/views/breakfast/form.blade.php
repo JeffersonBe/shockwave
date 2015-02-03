@@ -22,7 +22,6 @@
     'number'          => 'required|numeric',
     'email'           => 'required|email',
     'adress_delivery' => 'required|max:25',
-    'date_delivery'   => 'required',
     'hour_delivery'   => 'required|max:7',
     'comment'         => 'max:500|alpha-num',
     'g-recaptcha-response'  => 'required|recaptcha',
@@ -45,16 +44,6 @@
 
   Former::text('adress_delivery')
   ->label("Adresse de livraison"),
-
-  Former::select('date_delivery')
-  ->options(array(
-  'mercredi'   => 'mercredi',
-  'jeudi'  => 'jeudi',
-  'vendredi'  => 'vendredi',
-  'samedi'  => 'samedi',
-  'dimanche'  => 'dimanche'
-  ))
-  ->label("Date de livraison"),
 
   Former::select('hour_delivery')
   ->options(array(
