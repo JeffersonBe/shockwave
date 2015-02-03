@@ -64,15 +64,17 @@
 
   Former::textarea('comment')
   ->rows(2)->columns(20)
-  ->label('Commentaires'),
+  ->label('Commentaires')
 
-  Form::captcha(),
+}}
 
-  Former::actions()
-  ->large_primary_submit('Submit'),
+{{ Form::captcha() }}
+
+{{ Former::actions()
+  ->class('buttonOrder text-center')
+  ->large_primary_submit('Commander'),
 
   Former::close();
-
 }}
 </div>
 @stop

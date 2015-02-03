@@ -7,7 +7,6 @@ class BreakfastController extends \BaseController {
 	}
 
 	public function create(){
-		dd(Input::get('g-recaptcha-response'));
 		$rules = array(
 			'first_name'      => 'required|max:15|alpha',
 			'last_name'       => 'required|max:15|alpha',
@@ -18,8 +17,13 @@ class BreakfastController extends \BaseController {
 			'comment'         => 'max:500|alpha-num',
 			'g-recaptcha-response'  => 'required|recaptcha',
 		);
+		$messages = array(
+				'required'		=> "Le :attribute est requis",
+				'numeric'    	=> "L':attribute doit être un chiffre",
+				'recaptcha'		=> "Vous devez entrer le captcha",
+		);
 
-		$validator = Validator::make(Input::all(),$rules);
+		$validator = Validator::make(Input::all(),$rules, $messages);
 
 		if ($validator->fails()) {
 			return Redirect::back()
