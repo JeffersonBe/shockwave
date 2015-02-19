@@ -1,0 +1,106 @@
+header {
+  background-image: url("/img/pattern.png");
+  background-position: 300px;
+}
+#logo {
+  background-image: url(/img/logo.png);
+  width: 188px;
+  height: 100px;
+  background-size: 188px 100px;
+  margin: 15px auto;
+  background-repeat: no-repeat;
+}
+.social {
+  font-size: 35px;
+  position: absolute;
+  top: 15px;
+  a {
+    color: #eaeef5;
+  }
+}
+$bgDefault: #01333E;
+$bgHighlight: rgba(255, 255, 255, 0.52);
+$colDefault: #ecf0f1;
+$colHighlight: #fff;
+$colHighlightHover: black;
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover,
+    &:focus {
+      color: $colHighlight;
+    }
+  }
+  .navbar-text {
+    color: $colDefault;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,
+        &:focus {
+          color: $colHighlight;
+        }
+      }
+    }
+    > .active {
+      > a,
+      > a:hover,
+      > a:focus {
+        color: $colHighlightHover;
+        background-color: $bgHighlight;
+      }
+    }
+    > .open {
+      > a,
+      > a:hover,
+      > a:focus {
+        color: $colHighlightHover;
+        background-color: $bgHighlight;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover,
+    &:focus {
+      background-color: $bgHighlight;
+    }
+    .icon-bar {
+      background-color: $colDefault;
+    }
+  }
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault;
+  }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover,
+      &:focus {
+        color: $colHighlight;
+      }
+    }
+    > .active {
+      > a,
+      > a:hover,
+      > a:focus,
+       {
+        color: $colHighlightHover;
+        background-color: $bgHighlight;
+      }
+    }
+  }
+}
